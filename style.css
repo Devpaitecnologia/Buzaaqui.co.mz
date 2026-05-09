@@ -31,23 +31,38 @@
   display: none;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   padding: 15px;
   width: 100%;
-  background: cadetblue;
+  background: #f5f5f5;
+
+    min-height: 100vh;
+  
+
+}
+#btnCadastro{
+  background: #1877f2;
+}
+#btnLogin{
+  background: #007168;
 }
 .login form h2{
   margin-bottom: 20px;
-  color: blueviolet;
+    color: #007168;
 }
 .login form {
+  
+  
+  padding: 32px 24px;
+  max-width: 340px;
+  box-shadow: 0 4px 20px rgba(0,113,104,0.15);
+  border-top: 4px solid #007168;
+
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  backgrond: cornflowerblue;
+  background: white;
   border-radius: 20px;
-  padding: 10px;
 }
 .login form input{
   width: 100%;
@@ -55,7 +70,7 @@
   font-size: 1.3rem;
   padding: 10px;
   height: 45px;
-  border: none;
+  border: 2px solid #007168;
   border-radius: 15px;
   margin-bottom: 15px;
 }
@@ -64,8 +79,8 @@
   height: 45px;
   width: 100%;
   color: wheat;
-  border: nne;
-  background: darkcyan;
+  border: none;
+  
   font-size: 1.2rem;
   border-radius: 10px;
   padding: 10px;
@@ -117,6 +132,9 @@ background: white;
   margin: 0 auto;       /* centraliza */
 
 }
+.card h4{
+  margin-left: 10px;
+}
 details  {
   display: flex;
   padding: 15px;
@@ -156,7 +174,7 @@ details  {
   box-shadow: 1px 1px 9px lime;
 
   border-radius: 100px;
-  bottom: 45px;
+  bottom: 20px;
   right:40px;
 }
 .add svg{
@@ -169,6 +187,44 @@ details  {
   display: none;
   padding: 10px;
 }
+/* CSS */
+.upload-box {
+  text-align: cente;
+}
+
+.botao-upload {
+  background: #007168;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: Arial;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.botao-upload:hover {
+  background: #005A52;
+}
+
+.botao-upload:active {
+  transform: scale(0.98);
+}
+
+#preview {
+  margin-top: 16px;
+}
+
+#preview img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  border: 2px solid #007168;
+}
+
 .form{
   display: flex;
   box-shadow: 1px 1px 9px blue;
@@ -261,4 +317,38 @@ select{
 }
 .home.active{
   display: none;
+}
+/* perfil */
+.perfil{
+  display: none;
+  padding: 10px;
+}
+.minhaInfo{
+  align-items: ceter;
+  display: flex;
+  width: 100%;
+}
+.minhaInfo img{
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 100px;
+}
+.meusDados{
+  display: flex;
+  flex-direction: column;
+}
+.meusDados b{
+  color: gray;
+}
+.usuarios{
+  margin-top: 10px;
+  padding: px;
+  background: floralwhite;
+}
+.usuarios strong{
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 2px 15px;
+  background: darkkhaki;
 }

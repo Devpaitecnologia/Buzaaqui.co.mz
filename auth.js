@@ -18,6 +18,7 @@ const nomeInput = document.getElementById("nome");
 //const proficaoInput = document.getElementById("proficao");
 const emailInput = document.getElementById("email");
 const senhaInput = document.getElementById("senha");
+const infoLogin = document.getElementById("infoLogin");
 
 const btnLogin = document.getElementById("btnLogin");
 const btnCadastro = document.getElementById("btnCadastro");
@@ -29,12 +30,14 @@ btnLogin.addEventListener('click', (e) =>{
   const senha = senhaInput.value;
   firebase.auth().signInWithEmailAndPassword(email, senha)
   .then((user) => {
-    alert('dldldldldldl');
+    infoLogin.innerText = "Login feito com sucesso!";
     console.log('login feito com sucesso');
     document.querySelector('.login').style.display = "none";
     document.querySelector('.home').style.display = "block";
   }).catch((error) => {
-    console.error('erro com sucesso', error);
+     infoLogin.innerText = "Erro ao entrar na conta!";
+
+    console.error('Erro com sucesso', error);
   });
 });
 
@@ -58,6 +61,8 @@ btnCadastro.addEventListener('click', (e) =>{
     });
   })
   .catch((error) =>{
+     infoLogin.innerText = "Erro ao cadastrar!";
+
     console.error('erro com sucesso:', error);
   });
 });
@@ -65,6 +70,26 @@ btnCadastro.addEventListener('click', (e) =>{
 // Verificar se existe uma contA
 firebase.auth().onAuthStateChanged((user) =>{
   if (user) {
+     monitorarUsuarios();
+    // ... teu código que pega o nome ...
+
+    // MOSTRAR DESDE QUANDO É CADASTRADO
+    const dataCriacao = new Date(user.metadata.creationTime);
+    
+    // Formatar data pra PT: 09/05/2026
+    const dataFormatada = dataCriacao.toLocaleDateString('pt-BR', {
+      day: '2-digit',
+      month: '2-digit', 
+      year: 'numeric'
+    });
+    
+    document.getElementById('dataCadastro').textContent = dataFormatada;
+
+    // Versão com "há X dias" 
+    const diasCadastrado = Math.floor((new Date() - dataCriacao) / (1000 * 60 * 60 * 24));
+    document.getElementById('dataCadastro').textContent = `${dataFormatada} - há ${diasCadastrado} dias`;
+    
+  
        // usuario logado
     //console.log('Usuário logado:', user);
    //  location.href = "./index.html";
@@ -81,15 +106,17 @@ firebase.auth().onAuthStateChanged((user) =>{
       //   const numero = dadosUsuario.numero;
         //
       //const imagem = dadosUsuario.imagem;
-  //       const emailUser = dadosUsuario.email;
+    const emailUser = dadosUsuario.email;
         // const localizacao = dadosUsuario.locali;
 //document.getElementById('imagemP').innerHTML = `<img src='${imagem}.jpg'/>`;
  
        //  document.getElementById('imagemPerfil').innerHTML = `<img src='${imagem}.jpg'/>`;
      //document.getElementById('imagemUser').innerHTML = `<img src='${imagem}.jpg'/>`;
-     //document.getElementById('endereco').innerText = `${emailUser}!`;
+     document.getElementById('endereco').innerText = `${emailUser}!`;
   //  console.log('nome', nomeUsuario);
         document.getElementById('username').value = `${nomeUsuario}`;
+         document.getElementById('Usernome').innerText = `${nomeUsuario}`;
+
        /*  // proficao
         document.getElementById('details').innerHTML = `
            <b>Localização: ${dadosUsuario.locali}</b>
@@ -133,6 +160,16 @@ function sairConta(){
     document.querySelector('.home').style.display = "none";
   }).catch((error) =>{
     Alert('erro ao sair da conta');
+  });
+}
+
+// Atualiza contador em tempo real
+function monitorarUsuarios() {
+  const qtdElemento = document.getElementById('qtdUsuarios');
+  
+  firebase.database().ref('usuarios').on('value', (snapshot) => {
+    const total = snapshot.numChildren();
+    qtdElemento.textContent = total;
   });
 }
 

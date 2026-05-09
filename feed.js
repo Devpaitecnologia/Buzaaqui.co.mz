@@ -85,9 +85,10 @@ function loadPosts() {
               <div class="time">${new Date(post.timestamp || Date.now()).toLocaleString('pt-BR')}</div>
             </div>
           </div>
+            <h4>${post.nomeAP || ''}</h4>
+       
           ${imgHtml}
-          <h4>${post.nomeAP || ''}</h4>
-          <details>
+   <details>
             <p><b>Descrição:</b> ${safeMessage}</p>
             <br><b>Liga: <label>${post.numero || ''}</label></b>
             <br><hr>
@@ -178,8 +179,8 @@ async function deletePost(key) {
       const message = document.getElementById('message').value.trim();
       const color = document.getElementById('color').value;
 
-      if (!message) {
-        alert("Escreva uma mensagem antes de publicar!");
+      if (!message || !numero || !nomeAP) {
+        alert("Prencha os campos!");
         return;
       }
 

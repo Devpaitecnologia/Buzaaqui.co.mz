@@ -66,6 +66,7 @@ addBtn.addEventListener('click', function(){
 function  home(){
   document.querySelector('.sobre').style.display = "none";
   document.querySelector('.tudo').style.display = "flex";
+document.querySelector('.perfil').style.display = "none";
 
 }
 
@@ -73,5 +74,13 @@ function  home(){
 function  sobre(){
   document.querySelector('.sobre').style.display = "block";
   document.querySelector('.tudo').style.display = "none";
+document.querySelector('.perfil').style.display = "none";
 
+}
+//sobre
+function  perfil(){
+  document.querySelector('.sobre').style.display = "none";
+  document.querySelector('.tudo').style.display = "none";
+document.querySelector('.perfil').style.display = "block";
+  
 }

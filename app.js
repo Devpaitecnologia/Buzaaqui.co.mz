@@ -84,3 +84,19 @@ function  perfil(){
 document.querySelector('.perfil').style.display = "block";
   
 }
+
+
+
+
+document.getElementById('botao2').addEventListener('click', function() {
+  console.log('Clicou no botão 1');
+  
+  // Dispara o clique do botão 2 automaticamente
+  document.getElementById('imageInput').click();
+});
+
+/*document.getElementById('imageInput').addEventListener('click', function() {
+  console.log('Botão 2 foi clicado automaticamente');
+  //alert('Botão 2 ativado!');
+});
+*/

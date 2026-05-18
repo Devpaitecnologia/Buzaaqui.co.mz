@@ -172,7 +172,7 @@ details  {
   position: fixed;
   border: none;
   box-shadow: 1px 1px 9px lime;
-
+border-radius: 9px;
   border-radius: 100px;
   bottom: 20px;
   right:40px;
@@ -180,7 +180,15 @@ details  {
 .add svg{
   height: px;
 }
-
+.cor{
+  display: flex;
+}
+#color{
+  height: 40px;
+  width: 40px;
+  background: blue;
+  border-radius: 100px;
+}
 .post-add{
   position: absolute;
   top: 60px;
@@ -189,7 +197,7 @@ details  {
 }
 /* CSS */
 .upload-box {
-  text-align: cente;
+  text-align: centr;
 }
 
 .botao-upload {
@@ -211,7 +219,7 @@ details  {
 }
 
 .botao-upload:active {
-  transform: scale(0.98);
+  transform: scale(1.04);
 }
 
 #preview {

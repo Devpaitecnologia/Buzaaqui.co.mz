@@ -11,7 +11,9 @@
   };
 
   firebase.initializeApp(firebaseConfig);
-  
+  const db = firebase.database();
+const auth = firebase.auth(); // <- FALTAVA ISSO
+
 // variaveis
 const formLogin = document.getElementById("auth");
 const nomeInput = document.getElementById("nome");
@@ -144,7 +146,7 @@ firebase.auth().onAuthStateChanged((user) =>{
   } else{
     // usuario nao logado
     console.log('usuario nao logado');
-  document.querySelector('.login').style.display = "block";
+  document.querySelector('.login').style.display = "flex";
      document.getElementById('addBtn').style.display = "none";
 
      document.querySelector('.home').style.display = "none";

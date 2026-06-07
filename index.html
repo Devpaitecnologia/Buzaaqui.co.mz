@@ -42,6 +42,10 @@
     <li><a onclick="sobre()" href="#">Sobre</a></li>
     <li><a onclick="sairConta()" href="#">Sair</a></li>
   </ul>
+  <label>
+    <strong>@Desenvolvido pela DevPai</strong><br>
+    <b>versão: 1.0</b>
+  </label>
 </nav>
 
 <div class="overlay" id="overlay"></div>
@@ -79,8 +83,8 @@
       
     </div>
     <div  class="usuarios">
-      <h3>Agora São: <br>
-        Usuários no Cadastrados</h3>
+      <h3>Dados do BuzaAqui: <br>
+        </h3>
     </div>
     <div class="card-usuarios">
   <div class="icone">👥</div>
@@ -90,30 +94,14 @@
   </div>
 </div>
 
-<style>
-.card-usuarios {
-  background: #007168;
-  color: white;
-  padding: 16px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  max-width: 200px;
-}
-.card-usuarios .icone {
-  font-size: 32px;
-}
-.card-usuarios .numero {
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 1;
-}
-.card-usuarios .texto {
-  font-size: 12px;
-  opacity: 0.9;
-}
-</style>
+    <div class="contador-achados" >
+        <div class="icone">👥</div>
+
+      <div class="numero" id="contador-achados"></div>
+ 
+      <div class="texto" >Coisas Achadas e devolvidas</div>
+           
+    </div>
   </div>
   <div class="sobre">
     

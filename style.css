@@ -117,6 +117,7 @@ nav a{
 .card{
    box-shadow: 1px 1px 9px blue;
 background: white;
+  width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
   width: %;
@@ -140,7 +141,7 @@ details  {
   padding: 15px;
   flex-direction: column;
 }
-  .post-header { padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+  .post-header { padding: 14px 16px; display: flex; align-items: center; justify-content: space-between;gap: 12px; }
     .avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
     .username { font-weight: bold; font-size: 17px; }
 
@@ -157,6 +158,22 @@ details  {
   border-radius: 20px;
   display: flex;
   justify-content: center;
+}
+.ops {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ops span{
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid silver;
+  display: flex;
+  align-items: center;
+}
+ops span svg{
+  margin-left: 7px;
 }
 .card button{
   padding: 10px;
@@ -359,4 +376,45 @@ select{
   border-radius: 10px;
   padding: 2px 15px;
   background: darkkhaki;
+}
+
+.card-usuarios {
+  background: #007168;
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 200px;
+}
+ .icone {
+  font-size: 32px;
+}
+.numero {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+}
+.card-usuarios .texto {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.contador-achados{
+  margin-top: 10px;
+  background: cadetblue;
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 200px;
+
+}
+.contador-achados .texto{
+  font-size: 12px;
+  opacity: 0.9;
+
 }

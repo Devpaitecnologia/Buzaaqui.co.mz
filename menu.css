@@ -14,6 +14,12 @@
   transition: transform 0.3s ease; /* Aqui tá a suavidade */
   z-index: 1000;
 }
+nav label{
+  
+  position: fixed;
+  color: gray;
+  bottom: 40px;
+}
 
 .header.hide {
   transform: translateY(-100%); /* Joga o header pra cima */

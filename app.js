@@ -65,7 +65,7 @@ addBtn.addEventListener('click', function(){
 //home
 function  home(){
   document.querySelector('.sobre').style.display = "none";
-  document.querySelector('.tudo').style.display = "flex";
+  document.querySelector('.tudo').style.display = "grid";
 document.querySelector('.perfil').style.display = "none";
 
 }

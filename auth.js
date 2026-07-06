@@ -1,5 +1,14 @@
-
-
+const firebaseConfig = {
+  apiKey: "AIzaSyDNNrCilNbCPArMSNz0Jgv-yXH8Oyt_ii0",
+  authDomain: "coder-85d8f.firebaseapp.com",
+  databaseURL: "https://coder-85d8f-default-rtdb.firebaseio.com",
+  projectId: "coder-85d8f",
+  storageBucket: "coder-85d8f.firebasestorage.app",
+  messagingSenderId: "1085157812900",
+  appId: "1:1085157812900:web:751bee1bae37f05f6ed431",
+  measurementId: "G-1DQ7XFJ6ZP"
+};
+/*
 
  const firebaseConfig = {
     apiKey: "AIzaSyDhURTGDUqOuuvbClVqMRiEcYYvfDt_FPU",
@@ -8,7 +17,7 @@
     storageBucket: "code-fb13e.appspot.com",
     messagingSenderId: "749917957333",
     appId: "1:749917957333:web:6fc820b2bebb8e8234465c"
-  };
+  };*/
 
   firebase.initializeApp(firebaseConfig);
   const db = firebase.database();

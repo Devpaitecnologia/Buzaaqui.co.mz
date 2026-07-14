@@ -7,8 +7,10 @@
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <link rel="stylesheet" href="style.css"/>
    <link rel="stylesheet" href="menu.css"/>
-  <link rel="icon" href="favicon.png" />
+       
+  <meta http-equiv="Cache-Control" content="max-age=31536000">
   <title>Achados e perdidos</title>
+         <link rel="icon" href="favicon.png" />
 <meta name="description" content="Site para coisas achadas e perdidas! Você já é um membro?">
 </head>
 <body>
@@ -206,6 +208,8 @@
  <script src="feed.js"></script>
   
 <script>
+// cookies pequenos textos : id ,login, preferecias
+document.cookie = "nome=Joao; expires=Fri, 31 Dec 2026 12:00:00 UTC"
 function setProgress(percent) {
   const circle = document.querySelector('.progress');
   const text = document.querySelector('.percent');
